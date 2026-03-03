@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-brand-primary: #22c55e; /* green-500 */
+  --color-brand-secondary: #eab308; /* yellow-500 */
+  --color-brand-accent: #3b82f6; /* blue-500 */
+  --color-brand-dark: #0B0F1A;
+  --color-brand-surface: #161B26;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-slate-200 font-sans font-light antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply bg-white/10 border-brand-primary/30;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-brand-primary text-white font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg shadow-brand-primary/20;
+}
